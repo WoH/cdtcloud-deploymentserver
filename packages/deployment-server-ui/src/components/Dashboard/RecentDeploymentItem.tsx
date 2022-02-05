@@ -1,5 +1,4 @@
 import { Button, Col, List, Modal, Row, Tooltip, Typography } from 'antd'
-import { CSSTransition } from 'react-transition-group'
 import { DeployStatus, DeviceType, Device } from 'deployment-server'
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -59,7 +58,6 @@ export const RecentDeploymentItem = (props: Props) => {
   }, [])
 
   return (
-    <CSSTransition key={props.id} timeout={750} classNames={'deployment'}>
       <Item
         actions={[
           <Button
@@ -156,5 +154,5 @@ export const RecentDeploymentItem = (props: Props) => {
           undefined
         }
       </Item>
-    </CSSTransition>)
+    )
 }
